@@ -12,7 +12,7 @@ function fetchDataFromAPI(data) {
                 const loadingID = setInterval(() => {
                         console.log (i = i + ".")
                     },950)
-                ////
+                //fine caricamento
                 setTimeout(() => {
                     resolve ("Data filtered successfully")
                     console.log(data.filter((person) => person.name === "John"))
