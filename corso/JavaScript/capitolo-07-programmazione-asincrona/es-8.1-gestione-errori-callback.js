@@ -1,9 +1,9 @@
 function performOperation(a, b, callback) {
-    let sum = a * b
-    if (sum) {
+    let sum = a + b
+    if (typeof a === "number" && typeof b === "number") {
         callback(null, sum)
     } else {
-        callback(new Error("Please make sure to insert numbers as parameters"), null)
+        callback(new Error("Please make sure to insert two numbers as parameters"), null)
     }
   }
   
@@ -15,6 +15,6 @@ function performOperation(a, b, callback) {
   }
 }
 
-let ciao = []
+let prova = [1, 2]
 
-performOperation(ciao, 3, displayResult);
+performOperation(prova, 3, displayResult);
