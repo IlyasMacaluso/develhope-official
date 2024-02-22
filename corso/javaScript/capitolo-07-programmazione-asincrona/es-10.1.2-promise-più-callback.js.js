@@ -1,5 +1,6 @@
 //a partire dall'esercizio es-10.0 utilizzare le promise solo per la gestione dell'errore
 
+//parto da un array di persone
 const persons = [
     { name: "John", age: 30 },
     { name: "Ilyas", age: 20 },
@@ -11,14 +12,14 @@ function fetchDataFromAPI(data, callback) {
     return new Promise((resolve, reject) => {
         //setTimeout per simulare il completamento dell'operazione
         setTimeout(() => {
-            //controllo il tipo di dato inserito
+            //verifico il tipo di dato inserito per il controllo dell'errore (nota: mi da "object" e non "array" se faccio il console.log di typeof persons)
             if (typeof data === "object") {
-                //se è del tipo giusto allora restituisco un messaggio di successo
-                resolve("Data filtered succesfully")
                 //poi eseguo la callback per filtrare i dati
                 const filteredData = callback(data)
-                //e li stampo in console
+                //li stampo in console
                 console.log(filteredData)
+                //e il resolve restituisce un messaggio di successo
+                resolve ("Data filtered successfully")
             } else {
                 //se il tipo di dato è non valido restituisco un messaggio di errore
                 reject("Data filtering failed: Invalid type of data")
@@ -27,9 +28,9 @@ function fetchDataFromAPI(data, callback) {
     })
 }
 
-//callback che filter a l'array di persone
+//callback che filtra l'array di persone
 function handleData(data) {
-    let filteredData = data.filter((person) => person.name === "John")
+    let filteredData = data.filter(person => person.name === "John")
     //Controlla se il risultato del .filter non è un array vuoto
     if (filteredData.length > 0) {
         //se non è vuoto restituisce l'array filtrato
@@ -41,7 +42,7 @@ function handleData(data) {
 }
 
 //chiamo la funzione
-const result = fetchDataFromAPI(persons, handleData)
-    //.then e .catch stampano solo i messaggi di successo / fallimento dell'operazione
+fetchDataFromAPI(persons, handleData)
+    //.then e .catch stampano solo i messaggi di successo / errore dell'operazione
     .then((successMessage) => console.log(successMessage))
     .catch((errorMessage) => console.log(errorMessage))

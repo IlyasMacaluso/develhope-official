@@ -19,7 +19,7 @@ function fetchDataFromAPI(data, callback) {
       //dopo due secondi stampiamo il risultato dell'operazione che callback effettua su data e fermiamo il setInterval
     }
     
-    function handleData(error, data) {
+    function handleData(data) {
             return data.filter((person) => person.name === "John");
     }
     //la funzione che viene richiamata da fetchDataFromAPI, e che filtra i dati ricevuti come argomento da essa

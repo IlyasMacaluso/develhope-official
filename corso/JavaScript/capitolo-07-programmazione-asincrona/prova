@@ -1,8 +1,0 @@
-function calcolatrice (a, b, callback){
-    let result = callback(a, b)
-    console.log (result)
-} 
-
-function sum (a, b) {
-    return a + b
-} 

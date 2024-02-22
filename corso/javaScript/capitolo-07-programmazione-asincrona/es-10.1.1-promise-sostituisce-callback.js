@@ -25,7 +25,7 @@ function fetchDataFromAPI(data) {
 }
 
 //richiamo la funzione passando il parametro persons
-const result = fetchDataFromAPI(persons)
+fetchDataFromAPI(persons)
     //se non c'è stato errore eseguo delle operazioni su data
   .then((data) => {
     //assegno ad una variabile il rusultato dell'array filtrato
