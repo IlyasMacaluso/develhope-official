@@ -50,7 +50,7 @@ function listTasks(tasks) {
 //function3 prende come parametro una callback e un numero indefinito di parametri
 async function tasksManagement(callback, ...modifyTask) {
     try {
-        for (i = 0; i < modifyTask.length; i++) {
+        for (let i = 0; i < modifyTask.length; i++) {
             {
                 const modifiedTask = await callback (modifyTask[i])
                 console.log(modifiedTask)
