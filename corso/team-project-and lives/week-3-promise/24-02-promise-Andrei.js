@@ -12,7 +12,7 @@ function insertNumber(number) {
     })
 }
 
-function moltiplyBy2(number) {
+function multiplyBy2(number) {
     return new Promise((resolve) => {
         setTimeout(() => {
             let per2 = number * 2
@@ -21,7 +21,7 @@ function moltiplyBy2(number) {
     })
 }
 
-function moltiplyBy3(number) {
+function multiplyBy3(number) {
     return new Promise((resolve) => {
         setTimeout(() => {
             let per3 = number * 3

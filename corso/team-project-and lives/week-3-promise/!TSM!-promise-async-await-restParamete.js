@@ -47,8 +47,8 @@ function listTasks(tasks) {
 }
 
 
-//function3 prende come parametro una callback e un numero indefinito di parametri
-async function tasksManagement(callback, ...modifyTask) {
+//function3 prende come parametro "addTasks" o "completeTasks" e un numero indefinito di parametri (da aggoingere o rimuovere)
+async function taskManagement(callback, ...modifyTask) {
     try {
         for (i = 0; i < modifyTask.length; i++) {
             {
@@ -61,7 +61,7 @@ async function tasksManagement(callback, ...modifyTask) {
     }
 }
 
-
+//permette di effettuare più chiamate di taskManagement senza che si sovrappongano
 async function parallelManagement () {
     try{
         await tasksManagement(addTask, 10, `Add function 4 in "tasks.js"`, `Check async function3 in "tasks.js`, "Commit and push changes")
