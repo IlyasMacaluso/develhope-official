@@ -29,7 +29,7 @@ function completeTask(index) {
 }
 
 //function 4 print tasks and their index
-function listTasks(tasks) {
+function listTasks() {
     setTimeout(() => {
         console.log(`Listing tasks...`)
     }, 500)
@@ -48,11 +48,11 @@ function listTasks(tasks) {
 
 
 //function3 prende come parametro "addTasks" o "completeTasks" e un numero indefinito di parametri (da aggoingere o rimuovere)
-async function taskManagement(callback, ...modifyTask) {
+async function taskManagement(modifyToDo, ...parameters) {
     try {
-        for (let i = 0; i < modifyTask.length; i++) {
+        for (let i = 0; i < parameters.length; i++) {
             {
-                const modifiedTask = await callback (modifyTask[i])
+                const modifiedTask = await modifyToDo (parameters[i])
                 console.log(modifiedTask)
             }
         }
@@ -64,8 +64,8 @@ async function taskManagement(callback, ...modifyTask) {
 //permette di effettuare più chiamate di taskManagement senza che si sovrappongano
 async function parallelManagement () {
     try{
-        await tasksManagement(addTask, 10, `Add function 4 in "tasks.js"`, `Check async function3 in "tasks.js`, "Commit and push changes")
-        await tasksManagement(completeTask, "20", 2, 1) //da mettere in ordine decrescente in modo tale da non modificare l'indice degli altri elementi prima che vengano rimossi
+        await taskManagement(addTask, 10, `Add function 4 in "tasks.js"`, `Check async function3 in "tasks.js`, "Commit and push changes")
+        await taskManagement(completeTask, "20", 2, 1) //da mettere in ordine decrescente in modo tale da non modificare l'indice degli altri elementi prima che vengano rimossi
         const taskList = await listTasks(tasks)
         console.log(taskList)
 
