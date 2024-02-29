@@ -10,3 +10,11 @@ function listTasks(tasks) {
 }
 
 listTasks(tasks)
+
+//metodo migliore
+
+function betterListTasks (tasks) {
+    tasks.forEach((task, index) => console.log(`Index (${index}) : ${task}`))
+}
+
+betterListTasks(tasks)
