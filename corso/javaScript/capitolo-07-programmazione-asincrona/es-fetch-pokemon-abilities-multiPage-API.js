@@ -16,7 +16,7 @@ async function pokeFind(name, URL) {
         if (typeof name !== "string") {
             console.log("Error: pokeFind requires a string type value")
         } else {
-            const pokemon = data.results.filter((poke) => poke.name === name)
+            const pokemon = data.results.filter((poke) => poke.name.includes(name))
             if (pokemon.length > 0) {
                 console.log(`${name.toUpperCase()} abilities are:`)
                 const pokeInfo = await fetchData(`${pokemon[0].url}`)
@@ -35,4 +35,4 @@ async function pokeFind(name, URL) {
 
 // URL "https://pokeapi.co/api/v2/pokemon/"
 
-pokeFind("abra", "https://pokeapi.co/api/v2/pokemon/")
+pokeFind("treecko", "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=100")
