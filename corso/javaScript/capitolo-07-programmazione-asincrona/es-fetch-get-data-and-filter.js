@@ -1,6 +1,6 @@
 async function fetchData() {
     try {
-        const response = await fetch("https://jsonplaceholder.typicode.com/posts")
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts?")
         if (!response.ok) {
             //gestisco possibili errori (di rete, accesso negato, eccetera)
             throw Error("Fetch error: Could not retrieve data") // creo un nuovo errore più messaggio nell'eventualità
@@ -37,4 +37,4 @@ async function exercise(keyword) {
 }
 
 //chiamo la funzione passando a parametro un numero
-exercise(1)
+exercise(2)
