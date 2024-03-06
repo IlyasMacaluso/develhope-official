@@ -1,101 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <title>Lezione HTML</title>
+        <!-- Per fare pratica aggiungo anche le proprietà opengraph e l'icona della scheda-->
+        <link rel= "shourtcut icon" href="https://cdn-icons-png.flaticon.com/512/1994/1994825.png">
+        <meta property="og:image" content="https://media.istockphoto.com/id/1005983884/it/foto/calendario-bianco-pulito-su-sfondo-giallo-solido-con-spazio-di-copia-business-viaggi-o.jpg?s=1024x1024&w=is&k=20&c=gkWrCjTcbVX5z23pk71beZAM739aDmoKaBcOgV0gEh8=">
+        <meta property="og:title" content="HTML Table">
+        <meta property="og:description" content="HTML Table exercise: monthly income/expenses and yearly total">
+    </head>
 
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Lezione HTML</title>
-</head>
-
-<body>
-    <table style="border: solid 1px;">
-        
-        <colgroup>
-            <col style="background-color: yellowgreen;">
-        </colgroup>
-        <caption>Entrate e uscite mensili 2024</caption>
-
-        <thead>
-            <tr>
-            <th>Mesi</th>
-            <th>Entrate</th>
-            <th>Uscite</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>January</td>
-                <td>1200</td>
-                <td>980</td>
-            </tr>
-            <tr>
-                <td>February</td>
-                <td>1200</td>
-                <td>980</td>
-            </tr>
-            <tr>
-                <td>March</td>
-                <td>1200</td>
-                <td>980</td>
-            </tr>
-            <tr>
-                <td>April</td>
-                <td>1200</td>
-                <td>980</td>
-            </tr>
-            <tr>
-                <td>May</td>
-                <td>1200</td>
-                <td>980</td>
-            </tr>
-            <tr>
-                <td>June</td>
-                <td>1200</td>
-                <td>980</td>
-            </tr>
-            <tr>
-                <td>July</td>
-                <td>1200</td>
-                <td>980</td>
-            </tr>
-            <tr>
-                <td>August</td>
-                <td>1200</td>
-                <td>980</td>
-            </tr>
-            <tr>
-                <td>September</td>
-                <td>1200</td>
-                <td>980</td>
-            </tr>
-            <tr>
-                <td>October</td>
-                <td>1200</td>
-                <td>980</td>
-            </tr>
-            <tr>
-                <td>November</td>
-                <td>1200</td>
-                <td>980</td>
-            </tr>
-            <tr>
-                <td>December</td>
-                <td>1200</td>
-                <td>980</td>
-            </tr>
-        </tbody>
-        
-        <tfoot>
-            <tr>
-                <td>Totale</td>
-                <td>tot</td>
-                <td>tot</td>
-            </tr>
-        </tfoot>
-    </table>
-    
-</body>
-
+    <body>
+        <table>
+            <caption>
+                Entrate/uscite mensili 2023
+            </caption>
+            <!--Ho impostato dei colori per ogni colonna per visualizzare meglio la struttura della tabella-->
+            <colgroup>
+                <col style="background-color: rgb(116, 201, 94)" />
+                <col style="background-color: rgb(224, 224, 224)" />
+                <col style="background-color: rgb(224, 224, 224)" />
+            </colgroup>
+            <!--In <thead> abbiamo la prima riga con i titoli per ogni colonna-->
+            <thead>
+                <tr>
+                    <th>Mesi</th>
+                    <th>Entrate</th>
+                    <th>Uscite</th>
+                </tr>
+            </thead>
+            <!--In <tbody> abbiamo i dati della tabella, ovvero 12 righe mese/entrate/uscite-->
+            <tbody>
+                <tr>
+                    <td>January</td>
+                    <td>1200</td>
+                    <td>980</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>1200</td>
+                    <td>980</td>
+                </tr>
+                <tr>
+                    <td>March</td>
+                    <td>1200</td>
+                    <td>980</td>
+                </tr>
+                <tr>
+                    <td>April</td>
+                    <td>1200</td>
+                    <td>980</td>
+                </tr>
+                <tr>
+                    <td>May</td>
+                    <td>1200</td>
+                    <td>980</td>
+                </tr>
+                <tr>
+                    <td>June</td>
+                    <td>1200</td>
+                    <td>980</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>1200</td>
+                    <td>980</td>
+                </tr>
+                <tr>
+                    <td>August</td>
+                    <td>1200</td>
+                    <td>980</td>
+                </tr>
+                <tr>
+                    <td>September</td>
+                    <td>1200</td>
+                    <td>980</td>
+                </tr>
+                <tr>
+                    <td>October</td>
+                    <td>1200</td>
+                    <td>980</td>
+                </tr>
+                <tr>
+                    <td>November</td>
+                    <td>1200</td>
+                    <td>980</td>
+                </tr>
+                <tr>
+                    <td>December</td>
+                    <td>1200</td>
+                    <td>980</td>
+                </tr>
+            </tbody>
+            <!--In <tfoot> abbiamo l'ultima riga con il totale per colonna-->
+            <tfoot>
+                <tr>
+                    <td>Totale</td>
+                    <td>14400</td>
+                    <td>11760</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
 </html>

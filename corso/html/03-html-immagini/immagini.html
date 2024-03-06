@@ -1,0 +1,43 @@
+<!doctype html>
+<head> </head>
+<body>
+    <main>
+        <section>
+            <article>
+                <h1>Article title</h1>
+                <p>article content</p>
+                <!--Approccio non semantico-->
+                <div class="figure" style="border: solid">
+                    <img src="calendar-image.jpg" alt="An image of a calendar" />
+
+                    <img
+                        src="calendar-image.jpg"
+                        alt="A calendar on the side, on a yellow backgroud"
+                        width="320"
+                        height="120"
+                    />
+                    <p>How to start the year with the right energy</p>
+                </div>
+
+                <!--Approccio semantico-->
+                <figure style="border: solid">
+                    <img
+                        src="calendar-image.jpg"
+                        alt="A calendar on the left side, on a yellow backgroud"
+                        width="320"
+                    />
+                    <figcaption>How to start the year with the right !energy!</figcaption>
+                </figure>
+
+                <!--Tag con attributi di dimensione-->
+                <figure style="border: solid">
+                    <img
+                        src="calendar-image.jpg"
+                        alt="A calendar on the left side, on a yellow backgroud"
+                    />
+                    <!--srcset imposta la dimensione dell'immagine ad 1/2-->
+                    <figcaption>How to start the year with the right energy</figcaption>
+            </article>
+        </section>
+    </main>
+</body>
