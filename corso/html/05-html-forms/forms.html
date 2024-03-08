@@ -1,0 +1,83 @@
+<!doctype html>
+<head> </head>
+<body>
+    <main>
+        <form>
+            <section id="text-fields" style="border: solid">
+                <h3>Text Fields</h3>
+                <div>
+                    <label for="hero">
+                        <span>Name:</span>
+                    </label>
+                    <input type="text" id="hero" name="hero" value="Insert hero name here" />
+                </div>
+                <div>
+                    <label for="power">
+                        <span>Power:</span>
+                    </label>
+                    <input type="text" id="power" name="power" value="Insert hero power here" />
+                </div>
+                <div>
+                    <label for="email">
+                        <span>Email:</span>
+                    </label>
+                    <input type="text" id="email" name="email" value="Insert hero email here" />
+                </div>
+            </section>
+
+            <section id="radio-buttons" style="border: solid">
+                <h3>Radio buttons</h3>
+                <p>Multiple answer, can select one:</p>
+                <ul>
+                    <li>
+                        <label for="team1">
+                            <input type="radio" id="team1" name="team" value="JL" />
+                            Justice League
+                        </label>
+                    </li>
+                    <li>
+                        <label for="team2">
+                            <input type="radio" id="team2" name="team" value="T" />
+                            Titans
+                        </label>
+                    </li>
+                    <li>
+                        <label for="team3">
+                            <input type="radio" id="team3" name="team" value="SS" />
+                            Suicide Squad
+                        </label>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="text-fields" style="border: solid">
+                <h3>Checkbox</h3>
+                <p>On / off switches, can select multiple</p>
+                <div>
+                    <label for="use-weapons">
+                        <input
+                            type="checkbox"
+                            id="use-weapons"
+                            name="use-weapons"
+                            value="Uses weapons"
+                        />
+                        Use weapons
+                    </label>
+                </div>
+                <div>
+                    <label for="has-gf">
+                        <input type="checkbox" id="has-gf" name="has-gf" value="Has girlfriend" />
+                        Has girlfriend
+                    </label>
+                </div>
+
+                <div>
+                    <label for="alive">
+                        <input type="checkbox" id="alive" name="alive" value="Is alive" />
+                        Is alive
+                    </label>
+                </div>
+            </section>
+        </form>
+    </main>
+</body>
