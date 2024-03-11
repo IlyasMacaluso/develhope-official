@@ -1,0 +1,50 @@
+<!doctype html>
+<head> </head>
+<body>
+    <main>
+        <form>
+            <h1>Validazione dei dati</h1>
+            <!--Text fields-->
+            <section id="text-fields" style="border: solid">
+                <div>
+                    <label for="hero">
+                        <span>Name:</span>
+                    </label>
+                    <!--required -> must be filledbefore submit. minlenght -> must be more than set characters -->
+                    <input type="text" id="hero" name="hero" autofocus required minlength="3">
+                </div>
+                <div>
+                    <label for="power">
+                        <span>Power:</span>
+                    </label>
+                    <input type="text" id="power" name="power" minlength="4" maxlength="30"/>
+                </div>
+                <div>
+                    <label for="email">
+                        <span>Email:</span>
+                    </label>
+
+                    <!--type also automatically trigger a control. For "email" -> if no @ -> error-->
+                    <input type="text" id="email" name="email" required/>
+                </div>
+                <div>
+                    <label for="age">
+                        <span>Email:</span>
+                    </label>
+                    <!--number min/maz -> value must be above min set and below max set-->
+                    <input type="number" id="age" name="age" required min="16" max="80"/>
+                </div>
+            </section>
+
+            
+           <!--Button-->
+           <section id="button" style="border: solid">
+            <h3>Button</h3>
+            <p>Pulsante per inviare i dati (nel caso dei form)</p>
+            <div>
+                <button type="submit">Button label</button>
+            </div>
+        </section>
+        </form>
+    </main>
+</body>

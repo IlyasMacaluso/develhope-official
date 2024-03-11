@@ -3,6 +3,8 @@
 <body>
     <main>
         <form>
+
+            <!--Text fields-->
             <section id="text-fields" style="border: solid">
                 <h3>Text Fields</h3>
                 <div>
@@ -25,32 +27,38 @@
                 </div>
             </section>
 
+            <!--Radio buttons-->
             <section id="radio-buttons" style="border: solid">
                 <h3>Radio buttons</h3>
                 <p>Multiple answer, can select one:</p>
-                <ul>
-                    <li>
-                        <label for="team1">
-                            <input type="radio" id="team1" name="team" value="JL" />
-                            Justice League
-                        </label>
-                    </li>
-                    <li>
-                        <label for="team2">
-                            <input type="radio" id="team2" name="team" value="T" />
-                            Titans
-                        </label>
-                    </li>
-                    <li>
-                        <label for="team3">
-                            <input type="radio" id="team3" name="team" value="SS" />
-                            Suicide Squad
-                        </label>
-                    </li>
-                </ul>
+                <fieldset>
+                    <legend>Teams</legend>
+                    <ul>
+                        <li>
+                            <label for="team1">
+                                <input type="radio" id="team1" name="team" value="JL" />
+                                Justice League
+                            </label>
+                        </li>
+                        <li>
+                            <label for="team2">
+                                <input type="radio" id="team2" name="team" value="T" />
+                                Titans
+                            </label>
+                        </li>
+                        <li>
+                            <label for="team3">
+                                <input type="radio" id="team3" name="team" value="SS" />
+                                Suicide Squad
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+
             </section>
 
-            <section id="text-fields" style="border: solid">
+            <!--Checkboxes-->
+            <section id="checkboxes" style="border: solid">
                 <h3>Checkbox</h3>
                 <p>On / off switches, can select multiple</p>
                 <div>
@@ -78,6 +86,68 @@
                     </label>
                 </div>
             </section>
+
+            <!--Selection-->
+            <section id="selection" style="border: solid">
+                <h3>Selection</h3>
+                <p>Casella di selezione</p>
+                <div>
+                    <label for="role">
+                        <span>Ruolo</span>
+                    </label>
+                    <select id=”role” name=”role”>
+                        <optgroup label=”Positivo”>
+                            <option value="leader" selected>Leader</option>
+                            <option value="braddiodx">Braccio Destro</option>
+                            <option value="bracciosx">Braccio Sinistro</option>
+                        </optgroup>
+                        <optgroup label=Negativo>
+                            <option value="infiltrato">Infiltrato</option>
+                            <option value="traditore">Traditore</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </section>
+
+            <!--Datalist-->
+            <section id="datalist" style="border: solid">
+                <h3>Datalist</h3>
+                <p>Casella di testo con auto completamento con dati predefiniti</p>
+                <div>
+                    <label for="partner">Partner più noto</label>
+                    <input type="text" id="partner" name="partner" list="partners">
+                    <datalist id="partners">
+                        <option>Robin</option>
+                        <option>Asso</option>
+                        <option>Wonder Dog</option>
+                        <option>Donna Tray</option>
+                        <option>Superboy</option>
+                    </datalist>
+                </div>
+            </section>
+
+            <!--Textarea-->
+            <section id="textarea" style="border: solid">
+                <h3>Textarea</h3>
+                <p>Area di testo in cui inserire testi lunghi e strutturati su più righe</p>
+                <div>
+                    <label for="bio">
+                        <span>Bio</span>
+                    </label>
+                    <textarea cols="40" rows="8" name="bio">Default text</textarea>
+                </div>
+            </section>
+
+           <!--Button-->
+           <section id="button" style="border: solid">
+            <h3>Button</h3>
+            <p>Pulsante per inviare i dati (nel caso dei form)</p>
+            <div>
+                <button type="submit">Button label</button>
+            </div>
+        </section>
+
+
         </form>
     </main>
 </body>

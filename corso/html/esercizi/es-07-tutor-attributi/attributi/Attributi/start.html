@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <title>Lezione HTML</title>
+    </head>
+
+    <body>
+        <!--header della pagina-->
+        <header>
+            <h2>Esercizio Attributi</h2>
+        </header>
+        <main>
+            <h5>Aggiungi alla pagina</h5>
+            <ul>
+                <li>Un pulsante disabilitato</li>
+                <li>Un input numerico, con relativa label, nel range 0-100 e con step di 2</li>
+                <li>Una checkbox con relativa label</li>
+                <li>Un input di tipo date</li>
+            </ul>
+            <p>
+                La checkbox deve essere già selezionata all'apertura della pagina. <br />
+                L'input numerico deve avere il focus all'apertura della pagina.
+            </p>
+            <!--Ho aggiunto la consegna alla pagina per esercitarmi-->
+        </main>
+        <form action="server" method="get" style="border: solid">
+            <!--Header del form-->
+            <header>
+                <h3>Titolo del form</h3>
+                <p>Istruzioni per il form</p>
+            </header>
+            <!--Elementi richiesti-->
+            <div>
+                <button type="submit" id="button" disabled>Disabled button</button>
+            </div>
+            <div>
+                <label for="number">Inserisci un multiplo di 2 compreso tra 0 e 100</label>
+                <input
+                    type="number"
+                    id="number"
+                    name="number"
+                    step="2"
+                    min="0"
+                    max="100"
+                    autofocus
+                />
+            </div>
+            <div>
+                <label for="checkbox">On/Off</label>
+                <input type="checkbox" id="checkbox" name="checkbox" checked />
+            </div>
+            <div>
+                <label for="date">Seleziona una data</label>
+                <input type="date" id="date" name="date" />
+            </div>
+        </form>
+    </body>
+</html>
