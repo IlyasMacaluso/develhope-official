@@ -50,23 +50,33 @@
                     id="form-cc"
                     name="cc"
                     type="text"
+                    inputmode="numeric"
+                    minlength="13"
                     maxlength="19"
-                    placeholder="1234 1234 4321 4321"
+                    pattern="[0-9\s]{13,19}"
+                    placeholder="1234 1234 1234 1234"
                     required
                 />
+                <!--ho utilizzato pattern per far si che il campo sia valido solo se contiene numeri 
+                (e spazi nel caso del numero carta), min/maxlenght per definire il numero minimo di 
+                caratteri necessari, input mode per far visualizzare tastiera numerica nei dispositivi
+                con tastiera vistuale, e placeholder per dare all'utente un esempio di formattazione corretta-->
                 <label for="form-cvc">CVC</label>
                 <input
                     id="form-cvc"
                     name="cvc"
                     type="text"
+                    inputmode="numeric"
+                    minlength="3"
                     maxlength="3"
                     placeholder="123"
+                    pattern="[0-9]{3}"
                     required
                 />
                 <label for="form-exp">Scadenza</label>
-                <input id="form-exp" name="exp" type="date" required/>
+                <input id="form-exp" name="exp" type="date" required />
                 <label for="form-address">Indirizzo di fatturazione</label>
-                <input type="text" id="form-address" name="address" required/>
+                <input type="text" id="form-address" name="address" required />
             </div>
 
             <button type="submit">Registrati</button>
