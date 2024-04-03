@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fetch</title>
+        <style>
+            body {
+                margin: 48px;
+            }
+            main {
+                display: flex;
+                flex-direction: column;
+                max-width: 25rem;
+                border: solid 2px gray;
+                border-radius: 12px;
+                align-items: center;
+                padding: 48px;
+                padding-bottom: 1rem;
+                box-sizing: border-box;
+                margin: auto;
+            }
+            main img {
+                width: 100%;
+            }
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+            .buttons .nav-button {
+                padding: 1rem;
+                font-weight: 600;
+                box-sizing: border-box;
+                border: none;
+                border-radius: 8px;
+                transition: 200ms ease-in-out;
+            }
+            .buttons .nav-button:hover {
+                background-color: #333;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="buttons">
+                <button class="nav-button previous">Previous Book</button>
+                <button class="nav-button next">Next Book</button>
+            </div>
+            <h1 class="book-title"></h1>
+            <img class="book-cover" src="" alt="" />
+            <p class="book-summary"></p>
+            <script src="fetch.js"></script>
+            <script src="fetch-2.js"></script>
+        </main>
+    </body>
+</html>
