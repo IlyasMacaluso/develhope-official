@@ -10,7 +10,7 @@ let fibonacciArr = []
 
 //soluzione 1
 /* function fibonacci(number) {
-    for (i=0; i<number; i++) {
+    for (let i=0; i<number; i++) {
         c = b
         console.log(a + b)
         b = a + b
@@ -22,7 +22,7 @@ fibonacci(n) */
 //soluzione 2
 function oneToNArray(number) {
     let newArray = []
-    for (i = 1; i <= number; i++) {
+    for (let i = 1; i <= number; i++) {
         newArray.push(i)
     }
     return newArray
@@ -30,7 +30,7 @@ function oneToNArray(number) {
 
 function fibonacci(number) {
     let array = oneToNArray(number)
-    for (i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         if (array[i-1] &&  array[i-2]) {
             array[i] = array[i-1] + array[i-2]
         }
