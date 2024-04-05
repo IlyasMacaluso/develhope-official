@@ -28,8 +28,8 @@ console.log(numbers)
 
 for (let i = 0; i < arrLenght; i++) {
     console.log(numbers[i], numbers[i + 1])
-    if (numbers[i] === numbers[i + 1]) {
-        numbers.splice(numbers[i + 1], 1)
+    if (numbers[i] === numbers[i + 1] || numbers[i] === numbers[i - 1]) {
+        numbers.splice(numbers[i], 1)
         arrLenght = numbers.length
     }
 }
