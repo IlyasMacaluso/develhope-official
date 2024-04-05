@@ -33,11 +33,9 @@ function fibonacci(number) {
     for (i = 0; i < array.length; i++) {
         if (array[i-1] &&  array[i-2]) {
             array[i] = array[i-1] + array[i-2]
-        } else {
-            console.log("pd");
         }
     }
     console.log(array)
 }
-fibonacci(15)
+fibonacci(8)
 
