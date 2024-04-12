@@ -36,13 +36,20 @@ body {
     padding: 1.5rem 1.5rem;
     box-sizing: border-box;
 }
+.card-paper main div {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgb(211, 211, 211);
+    margin-bottom: 1rem;
+}
 .card-paper main h1 {
     margin: 0;
 }
 .card-paper main p {
     margin: 0;
-    height: 100px;
-    overflow-y: scroll;
+    height: fit-content;
+    max-height: 100px;
+    overflow-y: auto;
 }
 .card-paper img {
     width: 100%;
