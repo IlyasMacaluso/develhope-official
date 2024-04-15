@@ -1,0 +1,46 @@
+body {
+    margin: 1rem;
+}
+main {
+    padding: 1rem;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    max-width: 28rem;
+    margin: auto;
+}
+button {
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+    padding: 0 1rem;
+    width: 100%;
+    transition:
+        color 0.3s ease,
+        background 0.3s ease;
+}
+.search-field {
+    height: 48px;
+    border: rgb(212, 212, 212) solid 2px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+button:hover {
+    background-color: black;
+    color: white;
+}
+section {
+    padding: 1rem;
+}
+.result {
+    border-bottom: 2px solid rgb(230, 230, 230);
+    margin-bottom: 1rem;
+}
+.result h3 {
+    margin: 0;
+}
+.result p {
+    margin-bottom: .5rem 0;
+}

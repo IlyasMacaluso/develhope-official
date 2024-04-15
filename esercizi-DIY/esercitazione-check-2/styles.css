@@ -1,0 +1,55 @@
+body {
+    margin: 1rem;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+    border-radius: 12px;
+    padding: 1rem;
+    gap: 1rem;
+}
+.search {
+    display: flex;
+    gap: 1rem;
+    height: 48px;
+}
+.search-field {
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+    font-size: 1rem;
+    border-radius: 8px;
+    padding: .5rem;
+    box-sizing: border-box;
+    border: none;
+}
+.search-btn {
+    border: none;
+    border-radius: 8px;
+}
+.answ-section {
+    padding-top: 1rem;
+    border-top: solid 2px rgb(212, 212, 212);
+    
+}
+.meaning {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 12px;
+}
+.meaning p {
+    margin: 0;
+    margin-bottom: .5rem;
+}
+.meaning .example {
+    border-bottom: 2px solid rgb(200, 200, 200);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+.meaning .example:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}

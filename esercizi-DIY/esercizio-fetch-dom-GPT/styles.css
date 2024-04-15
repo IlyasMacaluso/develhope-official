@@ -1,0 +1,25 @@
+body {
+    margin: 1rem;
+}
+main {
+    padding: 1rem;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    border-radius: .5rem;
+    max-width: 28rem;
+    margin: auto;
+}
+button {
+    height:48px;
+    border-radius: 8px;
+    border: none;
+    padding: 0 1rem;
+    width: 100%;
+    transition: color .3s ease, background .3s ease;
+}
+button:hover {
+    background-color:  black;
+    color: white;
+}
+section {
+    padding: 1rem;
+}
