@@ -15,7 +15,7 @@ export function Welcome({ name, age }) {
 
             {/* age prop is present */}
             {age || age === 0 ? <Age age={age} /> : null}
-            
+
             {age >= 18 && age <= 65 ? <Age age={age} /> : null}
             {age >= 18 && age <= 65 && name.toUpperCase() === "Jhon".toUpperCase() ? (
                 <Age age={age} />
