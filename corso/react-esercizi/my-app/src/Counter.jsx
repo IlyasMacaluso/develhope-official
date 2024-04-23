@@ -6,7 +6,7 @@ export function Counter({initialValue = 0, incrementAmount = 1}) {
     const [counter, setCounter] = useState(initialValue)
 
     //it's better to use a callback function to update the coutner values, because they allow
-    //for multiple updates to the counter value within the same cicle (render)
+    //for multiple updates to the "state" value within the same cicle (render)
     function handleCounterIncrement() {
         setCounter((c) => c + incrementAmount)
     }
@@ -14,7 +14,7 @@ export function Counter({initialValue = 0, incrementAmount = 1}) {
         setCounter((c) => c - incrementAmount)
     }
     function handleCounterReset() {
-        setCounter((c) => (c = initialValue))
+        setCounter(initialValue)
     }
     return (
         <div>
