@@ -3,6 +3,7 @@ import { AlertClock } from "./AlertClock"
 import { Counter } from "./Counter"
 import { CounterUseEff } from "./CounterUseEff"
 import { Clock } from "./Clock"
+import { MouseClicker } from "./MouseClicker"
 
 export function App() {
     return (
@@ -13,6 +14,7 @@ export function App() {
             <Counter initialValue={0} incrementAmount={5} />
             <CounterUseEff initialValue={10} incrementAmount={10}/>
             <Clock />
+            <MouseClicker label="Click me!" />
         </div>
     )
 }
