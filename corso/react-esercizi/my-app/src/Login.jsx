@@ -7,9 +7,8 @@ function initializeData() {
         remember: false,
     }
 }
-export function Login() {
+export function Login({ onLogin }) {
     const [data, setData] = useState(initializeData())
-
     function handleInputChange(event) {
         const { name, type, value, checked } = event.target
         setData((prevData) => {
@@ -19,11 +18,17 @@ export function Login() {
             }
         })
     }
+    function handleLogin(event) {
+        event.preventDefault()
+        onLogin(data)
+    }
+    function handleReset(event) {
+        setData(() => initializeData())
+    }
 
     return (
-        <form action="submit">
-            <h2>Login</h2>
-            <label htmlFor="username">Username</label>
+        <form action="#" onSubmit={handleLogin}>
+            <h2>Login with buttons</h2>
             <input
                 type="text"
                 name="username"
@@ -32,7 +37,6 @@ export function Login() {
                 onChange={handleInputChange}
             />
 
-            <label htmlFor="password">password</label>
             <input
                 type="password"
                 name="password"
@@ -50,8 +54,11 @@ export function Login() {
                 onChange={handleInputChange}
             />
 
-            <button disabled={!data.username || !data.password}>Login</button>
-            {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
+            <button type="submit" disabled={!data.username || !data.password}>Login</button>
+            <button type="button" onClick={handleReset}>Reset</button>
+
+            <pre>{JSON.stringify(data, null, 2)}</pre>
         </form>
     )
 }
+

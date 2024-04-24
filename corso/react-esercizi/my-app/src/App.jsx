@@ -8,6 +8,10 @@ import { InteractiveWelcome } from "./InteractiveWelcome"
 import { Login } from "./Login"
 
 export function App() {
+
+    function onLogin (data) {
+        console.log(data)
+    }
     return (
         <div>
             <h1>La mia App</h1>
@@ -18,7 +22,8 @@ export function App() {
             <Clock />
             <MouseClicker label="Click me!" />
             <InteractiveWelcome />
-            <Login />
+            {/* <Login onLogin={onLogin}/> */}
+            <Login onLogin={onLogin}/>
         </div>
     )
 }

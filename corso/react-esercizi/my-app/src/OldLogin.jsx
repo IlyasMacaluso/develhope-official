@@ -7,7 +7,7 @@ function initializeData() {
         remember: false,
     }
 }
-export function LoginMore( {onLogin}) {
+export function OldLogin() {
     const [data, setData] = useState(initializeData())
 
     function handleInputChange(event) {
@@ -21,37 +21,30 @@ export function LoginMore( {onLogin}) {
     }
 
     return (
-        <form action="submit">
+        <form>
             <h2>Login</h2>
-            <label htmlFor="username">Username</label>
             <input
                 type="text"
                 name="username"
-                id="username"
                 value={data.username}
                 onChange={handleInputChange}
             />
 
-            <label htmlFor="password">password</label>
             <input
                 type="password"
                 name="password"
-                id="password"
                 value={data.password}
                 onChange={handleInputChange}
             />
-
-            <label htmlFor="remember">Remember me</label>
             <input
                 type="checkbox"
                 name="remember"
-                id="remember"
                 checked={data.remember}
                 onChange={handleInputChange}
             />
 
-            <button disabled={!data.username || !data.password} onClick={handleLogin}>Login</button>
-            {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
+            <button type="a" disabled={!data.username || !data.password}>Login</button>
+            <pre>{JSON.stringify(data, null, 2)}</pre>
         </form>
     )
 }
