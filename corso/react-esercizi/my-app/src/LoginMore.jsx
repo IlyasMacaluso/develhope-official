@@ -7,7 +7,7 @@ function initializeData() {
         remember: false,
     }
 }
-export function Login() {
+export function LoginMore( {onLogin}) {
     const [data, setData] = useState(initializeData())
 
     function handleInputChange(event) {
@@ -50,7 +50,7 @@ export function Login() {
                 onChange={handleInputChange}
             />
 
-            <button disabled={!data.username || !data.password}>Login</button>
+            <button disabled={!data.username || !data.password} onClick={handleLogin}>Login</button>
             {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
         </form>
     )
