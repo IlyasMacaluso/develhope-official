@@ -4,6 +4,8 @@ import { Counter } from "./Counter"
 import { CounterUseEff } from "./CounterUseEff"
 import { Clock } from "./Clock"
 import { MouseClicker } from "./MouseClicker"
+import { InteractiveWelcome } from "./InteractiveWelcome"
+import { Login } from "./Login"
 
 export function App() {
     return (
@@ -15,6 +17,8 @@ export function App() {
             <CounterUseEff initialValue={10} incrementAmount={10}/>
             <Clock />
             <MouseClicker label="Click me!" />
+            <InteractiveWelcome />
+            <Login />
         </div>
     )
 }
