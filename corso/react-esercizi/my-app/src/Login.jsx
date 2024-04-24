@@ -22,13 +22,13 @@ export function Login({ onLogin }) {
         event.preventDefault()
         onLogin(data)
     }
-    function handleReset(event) {
+    function handleReset() {
         setData(() => initializeData())
     }
 
     return (
         <form action="#" onSubmit={handleLogin}>
-            <h2>Login with buttons</h2>
+            <h1>Login (with buttons and submit)</h1>
             <input
                 type="text"
                 name="username"

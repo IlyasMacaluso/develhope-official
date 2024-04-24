@@ -8,22 +8,28 @@ import { InteractiveWelcome } from "./InteractiveWelcome"
 import { Login } from "./Login"
 
 export function App() {
-
-    function onLogin (data) {
+    function onLogin(data) {
         console.log(data)
     }
     return (
         <div>
             <h1>La mia App</h1>
+            <hr />
             <Welcome name="jhon" age={19} />
+            <hr />
             <AlertClock />
+            <hr />
             <Counter initialValue={0} incrementAmount={5} />
-            <CounterUseEff initialValue={10} incrementAmount={10}/>
+            <hr />
+            <CounterUseEff initialValue={10} incrementAmount={10} />
+            <hr />
             <Clock />
+            <hr />
             <MouseClicker label="Click me!" />
+            <hr />
             <InteractiveWelcome />
-            {/* <Login onLogin={onLogin}/> */}
-            <Login onLogin={onLogin}/>
+            <hr />
+            <Login onLogin={onLogin} />
         </div>
     )
 }

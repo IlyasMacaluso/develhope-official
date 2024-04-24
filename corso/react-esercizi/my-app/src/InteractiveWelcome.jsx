@@ -10,7 +10,7 @@ export function InteractiveWelcome() {
 
     return (
         <div>
-            <h2>Interactive Welcome</h2>
+            <h1>Interactive Welcome</h1>
             <Welcome name={username}/>
             <input name="username" type="text" value={username} onChange={handleInputChange} />
         </div>

@@ -18,6 +18,7 @@ export function Clock() {
 
     return (
         <div>
+            <h1>Clock</h1>
             <h2>The current time is: {currentTime}</h2>
         </div>
     )

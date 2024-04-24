@@ -10,6 +10,7 @@ export function MouseClicker({ label }) {
     }
     return (
         <div>
+            <h1>MouseClicker</h1>
             <button onClick={handleBtnClick} name="one">
                 <img onClick={handleImgClick}
                     src="https://cdn-icons-png.flaticon.com/512/32/32213.png"

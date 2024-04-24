@@ -32,6 +32,7 @@ export function CounterUseEff({ initialValue = 0, incrementAmount = 1 }) {
     }
     return (
         <div>
+            <h1>Counter with useEffect</h1>
             <CounterDisplay currentCountValue={counter} />
             <Button onClick={handleCounterIncrement} label={"Increment"} />
             <Button onClick={handleCounterDecrement} label={"Decrement"} />

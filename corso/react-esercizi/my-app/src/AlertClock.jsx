@@ -6,6 +6,7 @@ export function AlertClock() {
     }
     return (
         <div>
+            <h1>AlertClock</h1>
             <p>Clicca il bottone per visualizzare l'ora locale attuale</p>
             <Button onClick={handleShowTime} label="Mostra Ora"/>
        </div>
