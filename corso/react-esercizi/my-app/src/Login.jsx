@@ -51,7 +51,7 @@ export function Login() {
             />
 
             <button disabled={!data.username || !data.password}>Login</button>
-            <pre>{JSON.stringify(data, null, 2)}</pre>
+            {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
         </form>
     )
 }
