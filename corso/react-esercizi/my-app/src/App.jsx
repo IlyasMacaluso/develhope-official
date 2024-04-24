@@ -6,6 +6,7 @@ import { Clock } from "./Clock"
 import { MouseClicker } from "./MouseClicker"
 import { InteractiveWelcome } from "./InteractiveWelcome"
 import { Login } from "./Login"
+import { UncontrolledLogin } from "./UncontrolledLogin"
 
 export function App() {
     function onLogin(data) {
@@ -30,6 +31,8 @@ export function App() {
             <InteractiveWelcome />
             <hr />
             <Login onLogin={onLogin} />
+            <hr />
+            <UncontrolledLogin />
         </div>
     )
 }
