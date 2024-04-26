@@ -7,6 +7,9 @@ import { MouseClicker } from "./MouseClicker"
 import { InteractiveWelcome } from "./InteractiveWelcome"
 import { Login } from "./Login"
 import { UncontrolledLogin } from "./UncontrolledLogin"
+import FocusableInput from "./FocusableInput"
+import MountedRef from "./MountedRef"
+import CounterRef from "./CounterRef"
 
 export function App() {
     function onLogin(data) {
@@ -33,6 +36,12 @@ export function App() {
             <Login onLogin={onLogin} />
             <hr />
             <UncontrolledLogin />
+            <hr />
+            <FocusableInput />
+            <hr />
+            <MountedRef />
+            <hr />
+            <CounterRef  initialValue={0} incrementAmount={10}/>
         </div>
     )
 }
