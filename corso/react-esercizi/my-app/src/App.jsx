@@ -10,7 +10,7 @@ import { UncontrolledLogin } from "./UncontrolledLogin"
 import FocusableInput from "./FocusableInput"
 import MountedRef from "./MountedRef"
 import CounterRef from "./CounterRef"
-import Colors from "./Color"
+import Colors from "./Colors"
 
 const colors = [
     { id: 1, name: 'green' },
