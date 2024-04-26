@@ -11,6 +11,7 @@ import FocusableInput from "./FocusableInput"
 import MountedRef from "./MountedRef"
 import CounterRef from "./CounterRef"
 import Colors from "./Colors"
+import ToDoList from "./ToDoList"
 
 const colors = [
     { id: 1, name: 'green' },
@@ -52,6 +53,8 @@ export function App() {
             <CounterRef initialValue={0} incrementAmount={10} />
             <hr />
             <Colors colors={colors} />
+            <hr />
+            <ToDoList />
         </div>
     )
 }
