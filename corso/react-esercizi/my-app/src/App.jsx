@@ -10,7 +10,15 @@ import { UncontrolledLogin } from "./UncontrolledLogin"
 import FocusableInput from "./FocusableInput"
 import MountedRef from "./MountedRef"
 import CounterRef from "./CounterRef"
+import Colors from "./Color"
 
+const colors = [
+    { id: 1, name: 'green' },
+    { id: 2, name: 'red' },
+    { id: 3, name: 'blue' },
+    { id: 4, name: 'yellow' },
+    { id: 5, name: 'purple' },
+]
 export function App() {
     function onLogin(data) {
         console.log(data)
@@ -41,7 +49,9 @@ export function App() {
             <hr />
             <MountedRef />
             <hr />
-            <CounterRef  initialValue={0} incrementAmount={10}/>
+            <CounterRef initialValue={0} incrementAmount={10} />
+            <hr />
+            <Colors colors={colors} />
         </div>
     )
 }
