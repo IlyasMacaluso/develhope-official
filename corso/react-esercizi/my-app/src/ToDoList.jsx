@@ -1,23 +1,29 @@
 import { useState } from "react"
 
 function ToDoList() {
+    //lista di tasks
     const [todos, setTodos] = useState(["task1", "task2", "task3"])
+    //controlled form per aggiungere nuovo task alla lista di task
     const [newTask, setNewTask] = useState("")
 
-    //funzione che stampa e gestisce i singoli elementi della lista
+    //funzione che stampa e gestisce i singoli task
     function ToDoListItem({ task }) {
 
+        //funzione per rimuovere un task dalla lista (variabile di stato "todos")
         function handleTaskRemove() {
             setTodos((prevData) => {
+                //imposto il nuovo valore della variabile di stato "todos" filtrando tutti gli elementi
+                //con valore diverso dal task attuale (si dovrebbe utilizzare l'Id in un caso reale, ma non ne abbiamo in questo caso)
                 const newData = prevData.filter((todo) => {
                     if (todo !== task) {
                         return todo
                     }
                 })
-                console.log(newData);
+                //restituisco l'array filtrato che viene assegnato come valore di "todos" (in cui manca solo l'elemento corrente, che abbiamo quindi rimosso)
                 return [...newData]
             })
         }
+        //stampo tutti gli elementi di "todos" singolarmente
         return (
             <>
                 <li>{task}</li>
@@ -29,9 +35,11 @@ function ToDoList() {
     }
 
     //altre funzioni di ToDoList
+    // controlled form per aggiungere nuovo task
     function handleInputChange(event) {
         setNewTask(() => event.target.value)
     }
+    //aggiunzione del nuovo task alla variabile di stato "todos"
     function handleTaskAddition() {
         if (newTask != "") {
             setTodos((prevData) => {
@@ -41,6 +49,7 @@ function ToDoList() {
             })
         }
     }
+    //reset del campo di testo 
     function handleInputClear() {
         setNewTask("")
     }

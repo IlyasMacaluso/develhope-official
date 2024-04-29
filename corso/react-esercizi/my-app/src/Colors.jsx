@@ -1,6 +1,6 @@
 function Color ({color}) {
     return (
-        <li>{color}</li>
+        <li>{color.name}</li>
     )
 }
 
@@ -10,7 +10,7 @@ function Colors ({colors}) {
         <ul>
             <h1>Colors</h1>
             {colors.map(color => {
-                return <Color key={color.id} color={color.name} />
+                return <Color key={color.id} color={color} />
             })}
         </ul>
     )
