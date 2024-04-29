@@ -1,0 +1,6 @@
+.welcome {
+    background-color: #333;
+    color: white;
+    border: solid 4px rgb(255, 168, 168);
+    padding: 1rem;
+}

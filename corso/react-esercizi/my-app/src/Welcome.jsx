@@ -2,7 +2,7 @@ import { Age } from "./Age"
 
 export function Welcome({ name, age }) {
     return (
-        <div>
+        <div className="welcome">
             <h2>Welcome</h2>
             {name ? (
                 <p>
