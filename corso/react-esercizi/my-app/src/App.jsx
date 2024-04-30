@@ -12,6 +12,8 @@ import MountedRef from "./MountedRef"
 import CounterRef from "./CounterRef"
 import Colors from "./Colors"
 import ToDoList from "./ToDoList"
+import Container from "./Conainer"
+import ContainerChildren from "./ContainerChildren"
 
 const colors = [
     { id: 1, name: 'green' },
@@ -25,11 +27,10 @@ export function App() {
         console.log(data)
     }
     return (
-        <div>
+        <div className="app">
             <h1>La mia App</h1>
             <hr />
             <Welcome name="jhon" age={19} />
-            <hr />
             <AlertClock />
             <hr />
             <Counter initialValue={0} incrementAmount={5} />
@@ -55,6 +56,8 @@ export function App() {
             <Colors colors={colors} />
             <hr />
             <ToDoList />
+            <hr />
+            <Container title={ <h2>Container title</h2> } children={<ContainerChildren/>}/>
         </div>
     )
 }

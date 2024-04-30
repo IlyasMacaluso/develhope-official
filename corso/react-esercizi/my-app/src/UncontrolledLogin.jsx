@@ -17,7 +17,7 @@ export function UncontrolledLogin() {
         console.log(data)
     }
     return (
-        <form action="#" onSubmit={handleFormSubmit}>
+        <form className="bg-dark text-white" action="#" onSubmit={handleFormSubmit}>
             <h1>UncontrolledLogin</h1>
             <input name="username" type="text" />
             <input name="password" type="password" />

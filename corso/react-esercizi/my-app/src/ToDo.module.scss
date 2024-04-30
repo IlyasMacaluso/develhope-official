@@ -1,0 +1,36 @@
+.todoList {
+    background-color: #f2f2f2;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: solid 2px #333;
+    button {
+        display: flex;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        background-color: #9dc2d2;
+        &:hover{
+            background-color: #c1d7e0;
+        }
+        border: none;
+        margin: 0.5rem;
+    }
+    input {
+        height: 2rem;
+        border-radius: 0.5rem;
+        border: 2px solid rgb(222, 222, 222);
+        margin: 1rem 1rem 1rem 0;
+        padding: .5rem;
+        box-sizing: border-box;
+    }
+    li {
+        font-size: 1.2rem;
+        font-family: "Roboto";
+        + button {
+            background-color: rgb(236, 150, 37);
+            &:hover {
+                background-color: rgb(255, 187, 0);
+            }
+        }
+    }
+}

@@ -17,7 +17,7 @@ export function Clock() {
     //solo nel ciclo successivo e non immediatamente (il che fermerebbe il setInterval subito dopo l'attivazione)
 
     return (
-        <div>
+        <div className="clock">
             <h1>Clock</h1>
             <h2>The current time is: {currentTime}</h2>
         </div>

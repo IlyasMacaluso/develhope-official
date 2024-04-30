@@ -1,4 +1,5 @@
 import { useState } from "react"
+import styles from './ToDo.module.scss'
 
 function ToDoList() {
     //lista di tasks
@@ -55,7 +56,7 @@ function ToDoList() {
     }
 
     return (
-        <ul>
+        <ul className={styles.todoList}>
             <h1>ToDoList</h1>
             {todos.map((todo, index) => {
                 return (
