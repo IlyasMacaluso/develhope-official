@@ -16,16 +16,16 @@
         "Helvetica Neue",
         sans-serif;
 }
-body {
-    margin: 2rem;
-}
 .app {
+    background-color: #f7fcff;
     border-radius: 1rem;
     border: 2px solid #323232;
     padding: 2rem;
+    margin: 2rem;
+    box-sizing: border-box;
 }
 .welcome {
-    background-color: #f2f2f2;
+    background-color: white;
     border: solid 2px rgb(41, 41, 41);
     border-radius: 1rem;
     padding: 1rem;
