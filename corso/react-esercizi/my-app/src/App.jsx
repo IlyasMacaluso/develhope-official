@@ -57,7 +57,7 @@ export function App() {
             <hr />
             <ToDoList />
             <hr />
-            <Container title={ <h2>Container title</h2> } children={<ContainerChildren/>}/>
+            <Container/>
         </div>
     )
 }

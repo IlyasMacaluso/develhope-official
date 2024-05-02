@@ -1,12 +1,23 @@
-function ContainerChildren() {
-    return (<div>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque explicabo sit saepe rerum
-            asperiores beatae perspiciatis eos dolores esse laborum earum inventore ipsum voluptate
-            non, natus quae totam provident dicta aperiam eaque? Quia doloremque nulla accusamus.
-            Perferendis laborum tenetur quibusdam, provident repellat repudiandae ut facere, ullam
-            sint necessitatibus, nemo qui?
-        </p>
-    </div>)
+import { useState } from "react"
+import styles from "./ContainerChildren.module.scss"
+
+function ContainerChildren({ title, children }) {
+    const [collapsed, setCollapsed] = useState(true)
+
+    function handleContentToggle() {
+        setCollapsed((b) => !b)
+    }
+    return (
+        <div>
+            <div className="container-title">{title}</div>
+
+            <div className={collapsed ? styles.childrenContent : styles.childrenContentHidden}>
+                {children}
+            </div>
+            <button type="button" onClick={handleContentToggle}>
+                Show/Hide Cotnent
+            </button>
+        </div>
+    )
 }
 export default ContainerChildren
