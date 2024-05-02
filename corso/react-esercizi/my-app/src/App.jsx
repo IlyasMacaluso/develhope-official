@@ -2,7 +2,6 @@ import { Welcome } from "./Welcome"
 import { AlertClock } from "./AlertClock"
 import { Counter } from "./Counter"
 import { CounterUseEff } from "./CounterUseEff"
-import { Clock } from "./Clock"
 import { MouseClicker } from "./MouseClicker"
 import { InteractiveWelcome } from "./InteractiveWelcome"
 import { Login } from "./Login"
@@ -13,7 +12,7 @@ import CounterRef from "./CounterRef"
 import Colors from "./Colors"
 import ToDoList from "./ToDoList"
 import Container from "./Conainer"
-import ContainerChildren from "./ContainerChildren"
+import ClockWrapper from "./ClockWrapper"
 
 const colors = [
     { id: 1, name: 'green' },
@@ -37,7 +36,7 @@ export function App() {
             <hr />
             <CounterUseEff initialValue={10} incrementAmount={10} />
             <hr />
-            <Clock />
+            <ClockWrapper />
             <hr />
             <MouseClicker label="Click me!" />
             <hr />
