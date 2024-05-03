@@ -15,6 +15,10 @@ import Container from "./Conainer"
 import ClockWrapper from "./ClockWrapper"
 import GitHubUser from "./GitHubUser"
 import GitHubUsers from "./GitHubUsers"
+import CustomHookLogin from "./CustomHookLogin"
+import GitHubUsersCustomHooks from "./GitHubUsersCustomHook"
+import Ripasso from "./Ripasso"
+import CurrentLocation from "./CurrentLocation"
 
 const colors = [
     { id: 1, name: 'green' },
@@ -61,6 +65,14 @@ export function App() {
             <Container/> */}
             <hr />
             <GitHubUsers/>
+            <hr />
+            <CustomHookLogin />
+            <hr />
+            <GitHubUsersCustomHooks />
+            <hr />
+            <Ripasso />
+            <hr />
+            <CurrentLocation />
         </div>
     )
 }

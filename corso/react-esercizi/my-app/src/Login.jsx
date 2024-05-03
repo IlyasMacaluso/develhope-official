@@ -7,8 +7,11 @@ function initializeData() {
         remember: false,
     }
 }
+
 export function Login({ onLogin }) {
+
     const [data, setData] = useState(initializeData())
+    
     function handleInputChange(event) {
         const { name, type, value, checked } = event.target
         setData((prevData) => {
