@@ -33,7 +33,7 @@ export function App() {
     }
     return (
         <div className="app">
-{/*             <h1>La mia App</h1>
+            <h1>La mia App</h1>
             <hr />
             <Welcome name="jhon" age={19} />
             <AlertClock />
@@ -62,7 +62,7 @@ export function App() {
             <hr />
             <ToDoList />
             <hr />
-            <Container/> */}
+            <Container/>
             <hr />
             <GitHubUsers/>
             <hr />
