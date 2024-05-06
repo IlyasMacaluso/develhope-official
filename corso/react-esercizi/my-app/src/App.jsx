@@ -14,11 +14,13 @@ import ToDoList from "./ToDoList"
 import Container from "./Conainer"
 import ClockWrapper from "./ClockWrapper"
 import GitHubUser from "./GitHubUser"
-import GitHubUsers from "./GitHubUsers"
+// import GitHubUsers from "./GitHubUsers"
 import CustomHookLogin from "./CustomHookLogin"
 import GitHubUsersCustomHooks from "./GitHubUsersCustomHook"
 import Ripasso from "./Ripasso"
 import CurrentLocation from "./CurrentLocation"
+import GitHubUsers from "./ReactRouter3/GitHubUsers"
+import { Route, Routes } from "react-router-dom"
 
 const colors = [
     { id: 1, name: 'green' },
@@ -73,6 +75,10 @@ export function App() {
             <Ripasso />
             <hr />
             <CurrentLocation />
+            <hr />
+            <Routes >
+                <Route path=":id" element= {<GitHubUsers /> } />
+            </Routes>
         </div>
     )
 }

@@ -5,7 +5,7 @@ export function useGitHubUser() {
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(true)
 
-    const fetchData = useCallback(async () => {
+    async function fetchData() {
         try {
             const res = await fetch("https://jsonplaceholder.typicode.com/users")
             if (res.status !== 200) {
@@ -19,16 +19,11 @@ export function useGitHubUser() {
         } finally {
             setLoading(false)
         }
-    }, [])
+    }
 
-    const fetchedData = useCallback(
-        useEffect(() => {
-            fetchData
-        }, []),
-        []
-    )
-
-    fetchedData
+    useEffect(() => {
+        fetchData()
+    })
 
     return { data, error, loading }
 }
