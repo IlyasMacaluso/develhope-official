@@ -4,12 +4,10 @@ import { useParams } from "react-router-dom"
 function ShowGithubUser() {
     const [data, setData] = useState(null)
     const { id } = useParams()
-    console.log(data, id)
 
     async function fetchUser() {
         const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         const json = await res.json()
-        console.log("fetching", id)
         setData(() => json)
         console.log(data);
     }
