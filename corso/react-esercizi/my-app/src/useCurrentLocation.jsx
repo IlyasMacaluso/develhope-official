@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 function useCurrentLocation() {
     const [location, setLocation] = useState({})
@@ -9,7 +9,7 @@ function useCurrentLocation() {
         setLoading(true)
         navigator.geolocation.getCurrentPosition(successCb, errorCb)
     }
-
+    
     useEffect(() => {
         getPosition()
             setLoading(false)
