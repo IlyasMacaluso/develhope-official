@@ -1,6 +1,4 @@
-import { Age } from "./Age"
-
-export function Welcome({ name, age }) {
+function Welcome({ name }) {
     return (
         <div className="welcome">
             <h2>Welcome</h2>
@@ -11,16 +9,8 @@ export function Welcome({ name, age }) {
             ) : (
                 <p>Hello, user</p>
             )}
-            {age > 0 ? <Age age={age} /> : null}
-            {age >= 18 ? <Age age={age} /> : null}
-
-            {/* age prop is present */}
-            {age || age === 0 ? <Age age={age} /> : null}
-
-            {age >= 18 && age <= 65 ? <Age age={age} /> : null}
-            {age >= 18 && age <= 65 && name.toUpperCase() === "Jhon".toUpperCase() ? (
-                <Age age={age} />
-            ) : null}
         </div>
     )
 }
+
+export default Welcome

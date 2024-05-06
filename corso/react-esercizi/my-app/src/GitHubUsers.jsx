@@ -1,66 +1,22 @@
 import { useEffect, useState } from "react"
-import GitHubUser from "./GitHubUser"
+import { useParams } from "react-router-dom"
 
 function GitHubUsers() {
-    const [username, setUsername] = useState(null)
-    const [userdata, setUserdata] = useState(null)
-    const [error, setError] = useState(null)
-    const [loading, setLoading] = useState(true)
+    const { id } = useParams()
+    const [user, setUser] = useState()
 
-    async function fetchData() {
-        try {
-            const res = await fetch("https://jsonplaceholder.typicode.com/users")
-            if (res.status !== 200) {
-                setError(new Error("Fetch request failed"))
-            } else {
-                const data = await res.json()
-                setUserdata(data)
-                console.log(data)
-            }
-        } catch (error) {
-            setError(error.message)
-        } finally {
-            setLoading(false)
-        }
+    async function fetchUser() {
+        const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+        const data = await res.json()
+        setUser(data.name)
     }
-
     useEffect(() => {
-        fetchData()
-    }, [])
-
-    function handleUsernameChange(e) {
-        e.preventDefault()
-        const formData = new FormData(e.target)
-        setUsername(formData.get("username"))
-    }
-
+        fetchUser(id)
+    })
     return (
-        <>
-            <h1>GitHubUsers (search)</h1>
-            <ul className="results">
-                {loading && <h2>Loading...</h2>}
-                {error && <h2>{error}</h2>}
-                {username &&
-                    userdata &&
-                    username !== "" &&
-                    userdata
-                        .filter((user) => user.name.toUpperCase().includes(username.toUpperCase()))
-                        .map((user) => (
-                            <>
-                                <GitHubUser
-                                    key={Math.random()}
-                                    username={user.username}
-                                    name={user.name}
-                                />
-                            </>
-                        ))}
-            </ul>
-
-            <form action="#" onSubmit={handleUsernameChange}>
-                <input name="username" type="text" placeholder="Insert username here" />
-                <button type="submit">Search User</button>
-            </form>
-        </>
+        <h3>
+            The user possessing id "{id}" is {user}
+        </h3>
     )
 }
 
