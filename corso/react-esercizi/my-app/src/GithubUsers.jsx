@@ -18,8 +18,6 @@ function GithubUsers() {
     }, [])
     return (
         <ul>
-            <Outlet />
-
             {data &&
                 data.map((user, index) => {
                     return (
@@ -28,6 +26,7 @@ function GithubUsers() {
                         </li>
                     )
                 })}
+            <Outlet />
         </ul>
     )
 }

@@ -18,8 +18,13 @@ export function App() {
 
             <Routes>
                 <Route path="/" element={<Welcome name="Ilyas" />} />
-                <Route path="counter" element={<Counter />} />
+                <Route path="counter" element={<Counter initialValue={100} incrementAmount={10} />} />
                 <Route path="users" element={<GithubUsers />}>
+                    <Route index element = {
+                        <div>
+                            <h3>Select a user to show their informations</h3>
+                        </div>
+                    } />
                     <Route path=":id" element={<ShowGithubUser />} />
                 </Route>
 
