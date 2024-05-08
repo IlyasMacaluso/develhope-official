@@ -6,6 +6,7 @@ function GitHubUser({ username, name }) {
                 <div>
                     <h3>{name}</h3>
                     <p>{username}</p>
+                    <p>{email}</p>
                 </div>
             )}
         </li>
