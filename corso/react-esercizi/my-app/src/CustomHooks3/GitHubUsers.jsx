@@ -31,6 +31,7 @@ function GitHubUsersCustomHooks () {
                                     key={index}
                                     username={user.username}
                                     name={user.name}
+                                    email={user.email}
                                 />
                             </>
                         ))}
