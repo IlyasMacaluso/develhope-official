@@ -19,16 +19,9 @@ export function useGithubUser(username) {
         username && fetcher
     )
 
-    function fetchGithubUser(username) {
-        if (username) {
-            mutate()
-        }
-    }
-
     return {
         data,
         error,
-        loading: !error && !data,
-        fetchGithubUser,
+        loading: !error && !data && username,
     }
 }
