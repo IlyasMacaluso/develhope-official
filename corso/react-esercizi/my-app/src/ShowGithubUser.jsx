@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import GitHubUser from "./GithubUser"
+import GithubUser from "./GithubUser"
 
 function ShowGithubUsers() {
     const { id } = useParams()
@@ -14,7 +14,12 @@ function ShowGithubUsers() {
     useEffect(() => {
         fetchUser(id)
     })
-    return <GitHubUser name={data.name} username={data.username} email={data.email} />
+    return (
+        <>
+            <p>type another ID from 1 to 10 in the address abr to show that user</p>
+            <GithubUser name={data.name} username={data.username} email={data.email} />
+        </>
+    )
 }
 
 export default ShowGithubUsers

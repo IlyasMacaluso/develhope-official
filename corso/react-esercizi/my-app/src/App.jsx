@@ -12,7 +12,7 @@ export function App() {
             <hr />
             <div>
                 <Link to="/">Counter</Link> | <Link to="counter">Counter</Link> |
-                <Link to="/user/2">User with id 2</Link>
+                <Link to="/users/2">User with id 2</Link>
             </div>
 
             <Routes>
