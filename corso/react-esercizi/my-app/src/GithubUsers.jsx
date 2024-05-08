@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react"
 import { Link, Outlet } from "react-router-dom"
-import ShowGithubUser from "./ShowGithubUser"
 
 function GithubUsers() {
     const [data, setData] = useState([])
 
     async function fetchData() {
-        const res = await fetch(`https://jsonplaceholder.typicode.com/users`)
-        const json = await res.json()
-        setData(json)
+        try {
+            const res = await fetch(`https://jsonplaceholder.typicode.com/users`)
+            const json = await res.json()
+            setData(json)
+        } catch (error) {
+            console.error(error.message)
+        }
     }
     useEffect(() => {
         fetchData()
