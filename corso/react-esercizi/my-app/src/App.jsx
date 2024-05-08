@@ -4,6 +4,7 @@ import Counter from "./Counter"
 import { Link, Route, Routes } from "react-router-dom"
 import NotFound from "./NotFound"
 import GithubUsers from "./GithubUsers"
+import GithubUser from "./GithubUser"
 
 export function App() {
     return (
@@ -18,7 +19,9 @@ export function App() {
             <Routes>
                 <Route path="/" element={<Welcome name="Ilyas" />} />
                 <Route path="counter" element={<Counter initialValue={100} incrementAmount={10} />} />
-                <Route path="users" element={<GithubUsers />}/>
+                <Route path="users" element={<GithubUsers />}>
+                    <Route path=":username" element={<GithubUser />}/>
+                </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </div>
