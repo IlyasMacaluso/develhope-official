@@ -1,4 +1,4 @@
-function GitHubUser({ username, name }) {
+function GithubUser({ username, name }) {
 
     return (
         <li>
@@ -6,9 +6,10 @@ function GitHubUser({ username, name }) {
                 <div>
                     <h3>{name}</h3>
                     <p>{username}</p>
+                    <p>{email}</p>
                 </div>
             )}
         </li>
     )
 }
-export default GitHubUser
+export default GithubUser

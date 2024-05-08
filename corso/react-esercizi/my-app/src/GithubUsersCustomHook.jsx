@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { useGitHubUser } from "./useGitHubUser";
-import GitHubUser from "./GitHubUser";
+import { useGithubUser } from "./useGithubUser";
+import GithubUser from "./GithubUser";
 
-function GitHubUsersCustomHooks () {
+function GithubUsersCustomHooks () {
     const [username, setUsername] = useState("")
-    const {data, error, loading } = useGitHubUser()
+    const {data, error, loading } = useGithubUser()
 
     function handleUsernameChange(e) {
         e.preventDefault()
@@ -16,7 +16,7 @@ function GitHubUsersCustomHooks () {
 
     return (
         <>
-            <h1>GitHubUsers (search)</h1>
+            <h1>GithubUsers (search)</h1>
             <ul className="results">
                 {loading && <h2>Loading...</h2>}
                 {error && <h2>{error}</h2>}
@@ -27,10 +27,11 @@ function GitHubUsersCustomHooks () {
                         .filter((user) => user.name.toUpperCase().includes(username.toUpperCase()))
                         .map((user, index) => (
                             <>
-                                <GitHubUser
+                                <GithubUser
                                     key={index}
                                     username={user.username}
                                     name={user.name}
+                                    email={user.email}
                                 />
                             </>
                         ))}
@@ -43,4 +44,4 @@ function GitHubUsersCustomHooks () {
         </>)
 }
 
-export default GitHubUsersCustomHooks
+export default GithubUsersCustomHooks

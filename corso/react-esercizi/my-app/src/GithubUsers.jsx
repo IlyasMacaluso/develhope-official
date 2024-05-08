@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react"
-import GitHubUser from "./GitHubUser"
+import GithubUser from "./GithubUser"
 
-function GitHubUsers() {
+function GithubUsers() {
     const [username, setUsername] = useState(null)
     const [userdata, setUserdata] = useState(null)
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(true)
 
-    // nota: sto usando una API differente perchè quella di github veniva bloccata dopo una decina di tentativi bloccandomi l'accesso per ore
     async function fetchData() {
         try {
             const res = await fetch("https://jsonplaceholder.typicode.com/users")
@@ -37,7 +36,7 @@ function GitHubUsers() {
 
     return (
         <>
-            <h1>GitHubUsers (search)</h1>
+            <h1>GithubUsers (search)</h1>
             <ul className="results">
                 {loading && <h2>Loading...</h2>}
                 {error && <h2>{error}</h2>}
@@ -48,10 +47,11 @@ function GitHubUsers() {
                         .filter((user) => user.name.toUpperCase().includes(username.toUpperCase()))
                         .map((user) => (
                             <>
-                                <GitHubUser
+                                <GithubUser
                                     key={Math.random()}
                                     username={user.username}
                                     name={user.name}
+                                    email={user.email}
                                 />
                             </>
                         ))}
@@ -65,4 +65,4 @@ function GitHubUsers() {
     )
 }
 
-export default GitHubUsers
+export default GithubUsers

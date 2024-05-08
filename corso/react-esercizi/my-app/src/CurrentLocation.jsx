@@ -6,6 +6,7 @@ function CurrentLocation() {
     console.log(location)
     return (
         <>
+            <h2>Current location (with custom hook)</h2>
             {loading && <p>Loading...</p>}
             {location && (
                 <ul>

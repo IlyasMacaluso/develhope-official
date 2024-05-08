@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
-function GitHubUsers() {
+function GithubUsers() {
     const { id } = useParams()
     const [user, setUser] = useState()
 
@@ -20,4 +20,4 @@ function GitHubUsers() {
     )
 }
 
-export default GitHubUsers
+export default GithubUsers

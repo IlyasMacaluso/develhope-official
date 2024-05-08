@@ -26,6 +26,7 @@ function Ripasso() {
 
     return (
         <div>
+            <h2>Ripasso</h2>
             <form action="#" onSubmit={handleSubmit}>
                 <input type="text" name="todo" />
                 <button type="submit">Add to-do</button>
