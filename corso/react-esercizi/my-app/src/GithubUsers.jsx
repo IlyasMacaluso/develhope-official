@@ -1,14 +1,13 @@
-import { useState } from "react";
-import GithubUser from "./GithubUser";
-import { useGithubUser } from "./useGithubUser";
+import { useState } from "react"
+import GithubUser from "./GithubUser"
+import { useGithubUser } from "./useGithubUser"
 
-function GithubUsersCustomHooks () {
+function GithubUsersCustomHooks() {
     const [username, setUsername] = useState("")
-    const {data, error, loading } = useGithubUser()
+    const { data, error, loading } = useGithubUser(username)
 
     function handleUsernameChange(e) {
         e.preventDefault()
-
         const formData = new FormData(e.target)
         setUsername(formData.get("username"))
         e.target.reset()
@@ -17,31 +16,29 @@ function GithubUsersCustomHooks () {
     return (
         <>
             <h1>GithubUsers (search)</h1>
-            <ul className="results">
-                {loading && <h2>Loading...</h2>}
-                {error && <h2>{error}</h2>}
-                {username &&
-                    data &&
-                    username !== "" &&
-                    data
-                        .filter((user) => user.name.toUpperCase().includes(username.toUpperCase()))
-                        .map((user, index) => (
-                            <>
-                                <GithubUser
-                                    key={index}
-                                    username={user.username}
-                                    name={user.name}
-                                    email={user.email}
-                                />
-                            </>
-                        ))}
-            </ul>
-
             <form action="#" onSubmit={handleUsernameChange}>
                 <input name="username" type="text" placeholder="Insert username here" />
                 <button type="submit">Search User</button>
             </form>
-        </>)
+            {loading && <h3>Loading...</h3>}
+            {error && <h3>{error.message}</h3>}
+            {error && (
+                <p>
+                    <b>Error {error.status}:</b> {error.info.message}
+                </p>
+            )}
+            {console.log(data)}
+            {data && (
+                <GithubUser
+                    key={data.id}
+                    username={data.name}
+                    name={data.login}
+                    img={data.avatar_url}
+                    data
+                />
+            )}
+        </>
+    )
 }
 
 export default GithubUsersCustomHooks

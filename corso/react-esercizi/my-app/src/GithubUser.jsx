@@ -1,15 +1,15 @@
-function GithubUser({ username, name, email }) {
+function GithubUser({ username, name, img }) {
 
     return (
-        <li>
-            {(username, name, email) && (
+        <div>
+            {(username, name, img) && (
                 <div>
                     <h3>{name}</h3>
                     <p>{username}</p>
-                    <p>{email}</p>
+                    <img height="48px" width="48px" src={img} alt="" />
                 </div>
             )}
-        </li>
+        </div>
     )
 }
 export default GithubUser

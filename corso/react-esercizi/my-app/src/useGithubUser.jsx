@@ -1,32 +1,34 @@
-import { useEffect, useState } from "react"
+import useSWR from "swr"
 
-export function useGithubUser() {
+const fetcher = async (url) => {
+    const res = await fetch(url)
+    if (!res.ok) {
+        const error = new Error("An error occourred while fetching data")
+        console.log( error.message )
+        error.info = await res.json()
+        error.status = res.status
+        throw error
+    }
+    return res.json()
+}
 
-    const [data, setData] = useState (null)
-    const [error, setError] = useState(null)
-    const [loading, setLoading] = useState(true)
+export function useGithubUser(username) {
+    console.log(username)
+    const { data, error, mutate } = useSWR(
+        `https://api.github.com/users/${username}`,
+        username && fetcher
+    )
 
-    // nota: sto usando una API differente perchè quella di Github veniva bloccata dopo una decina di tentativi bloccandomi l'accesso per ore
-    async function fetchData() {
-        try {
-            const res = await fetch("https://jsonplaceholder.typicode.com/users")
-            if (res.status !== 200) {
-                setError(new Error("Fetch request failed"))
-            } else {
-                const data = await res.json()
-                setData(data)
-                console.log(data)
-            }
-        } catch (error) {
-            setError(error.message)
-        } finally {
-            setLoading(false)
+    function fetchGithubUser(username) {
+        if (username) {
+            mutate()
         }
     }
 
-    useEffect (() => {
-        fetchData()
-    }, [])
-
-    return {data, error, loading}
+    return {
+        data,
+        error,
+        loading: !error && !data,
+        fetchGithubUser,
+    }
 }
