@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useGitHubUser } from "./useGithubUser";
-import GitHubUser from "./GitHubUser";
+import GithubUser from "./GithubUser";
+import { useGithubUser } from "./useGithubUser";
 
 function GithubUsersCustomHooks () {
     const [username, setUsername] = useState("")
@@ -31,6 +31,7 @@ function GithubUsersCustomHooks () {
                                     key={index}
                                     username={user.username}
                                     name={user.name}
+                                    email={user.email}
                                 />
                             </>
                         ))}
