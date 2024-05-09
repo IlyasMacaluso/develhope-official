@@ -31,10 +31,14 @@ export function useGithubUser(username) {
             },
         }
     )
+
+    function handleReloadUser() {
+        mutate()
+    }
     return {
         data,
         error,
         loading: !error && !data && username,
-        handleReloadUser: () => mutate(),
+        handleReloadUser,
     }
 }
