@@ -7,7 +7,6 @@ function GithubUser() {
 
     return (
         <div>
-            <button onClick={handleReloadUser}>Reload User</button>
             {loading && !username && <h3>Loading....</h3>}
             {error && (
                 <>
@@ -24,6 +23,7 @@ function GithubUser() {
                     <img height="48px" width="48px" src={data.avatar_url} alt="" />
                 </div>
             )}
+            <button onClick={handleReloadUser}>Reload User</button>
         </div>
     )
 }

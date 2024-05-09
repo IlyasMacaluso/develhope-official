@@ -8,7 +8,6 @@ function GithubUsersCustomHooks() {
         const formData = new FormData(e.target)
         const username = formData.get("username")
         navigate(`./${username}`)
-        e.target.reset()
     }
     return (
         <>
