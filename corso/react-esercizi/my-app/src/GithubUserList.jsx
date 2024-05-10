@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, Outlet } from "react-router-dom"
 
-function GithubUsers() {
+function GithubUserList() {
     const [data, setData] = useState([])
 
     async function fetchData() {
@@ -16,12 +16,13 @@ function GithubUsers() {
     useEffect(() => {
         fetchData()
     }, [])
+
     return (
         <ul>
             {data &&
                 data.map((user, index) => {
                     return (
-                        <li key={index}>
+                        <li key={user.id}>
                             <Link to={`${user.id}`}>{user.name}</Link>
                         </li>
                     )
@@ -31,4 +32,4 @@ function GithubUsers() {
     )
 }
 
-export default GithubUsers
+export default GithubUserList
