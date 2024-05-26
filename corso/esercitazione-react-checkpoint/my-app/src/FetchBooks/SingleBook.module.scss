@@ -1,0 +1,23 @@
+.book {
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    outline: 2px solid lightgray;
+    flex-basis: 300px;
+    min-width: 300px;
+    flex-grow: 1;
+    & img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+    & p {
+        margin: 0;
+    }
+    & h4{
+        margin: 0;
+    }
+}
