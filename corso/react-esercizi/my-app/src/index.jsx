@@ -1,8 +1,7 @@
 import { createRoot } from "react-dom/client"
-import  Root  from "./Root"
 import { StrictMode } from "react"
+import  Root  from "./Root"
 import "./index.css"
-import "./Clock.scss"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 createRoot(document.getElementById("root")).render(

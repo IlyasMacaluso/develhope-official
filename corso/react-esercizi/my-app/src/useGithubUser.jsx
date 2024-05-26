@@ -27,3 +27,4 @@ export function useGithubUser() {
 
     return { data, error, loading }
 }
+

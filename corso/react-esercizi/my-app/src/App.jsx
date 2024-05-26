@@ -1,75 +1,35 @@
-import { Welcome } from "./Welcome"
-import { AlertClock } from "./AlertClock"
-import { Counter } from "./Counter"
-import { CounterUseEff } from "./CounterUseEff"
-import { MouseClicker } from "./MouseClicker"
-import { InteractiveWelcome } from "./InteractiveWelcome"
-import { Login } from "./Login"
-import { UncontrolledLogin } from "./UncontrolledLogin"
-import FocusableInput from "./FocusableInput"
-import MountedRef from "./MountedRef"
-import CounterRef from "./CounterRef"
-import Colors from "./Colors"
-import ToDoList from "./ToDoList"
-import Container from "./Conainer"
-import ClockWrapper from "./ClockWrapper"
-import CustomHookLogin from "./CustomHookLogin"
-import GithubUsersCustomHooks from "./GithubUsersCustomHook"
-import Ripasso from "./Ripasso"
-import CurrentLocation from "./CurrentLocation"
+import Welcome from "./Welcome"
+import Counter from "./Counter"
 
-const colors = [
-    { id: 1, name: 'green' },
-    { id: 2, name: 'red' },
-    { id: 3, name: 'blue' },
-    { id: 4, name: 'yellow' },
-    { id: 5, name: 'purple' },
-]
+import { Link, Route, Routes } from "react-router-dom"
+import NotFound from "./NotFound"
+import ShowGithubUser from "./ShowGithubUser"
+import GithubUserList from "./GithubUserList"
+
 export function App() {
-    function onLogin(data) {
-        console.log(data)
-    }
     return (
         <div className="app">
             <h1>La mia App</h1>
             <hr />
-            <Welcome name="jhon" age={19} />
-            <AlertClock />
-            <hr />
-            <Counter initialValue={0} incrementAmount={5} />
-            <hr />
-            <CounterUseEff initialValue={10} incrementAmount={10} />
-            <hr />
-            <ClockWrapper />
-            <hr />
-            <MouseClicker label="Click me!" />
-            <hr />
-            <InteractiveWelcome />
-            <hr />
-            <Login onLogin={onLogin} />
-            <hr />
-            <UncontrolledLogin />
-            <hr />
-            <FocusableInput />
-            <hr />
-            <MountedRef />
-            <hr />
-            <CounterRef initialValue={0} incrementAmount={10} />
-            <hr />
-            <Colors colors={colors} />
-            <hr />
-            <ToDoList />
-            <hr />
-            <Container/>
-            <hr />
-            <CustomHookLogin />
-            <hr />
-            <GithubUsersCustomHooks />
-            <hr />
-            <Ripasso />
-            <hr />
-            <CurrentLocation />
-            <hr />
+            <div>
+                <Link to="/">Welcome</Link> | <Link to="counter">Counter</Link> |
+                <Link to="/users">Users</Link>
+            </div>
+
+            <Routes>
+                <Route path="/" element={<Welcome name="Ilyas" />} />
+                <Route path="counter" element={<Counter initialValue={100} incrementAmount={10} />} />
+                <Route path="users" element={<GithubUserList />}>
+                    <Route index element = {
+                        <div>
+                            <h3>Select a user to show their informations</h3>
+                        </div>
+                    } />
+                    <Route path=":id" element={<ShowGithubUser />} />
+                </Route>
+
+                <Route path="*" element={<NotFound />} />
+            </Routes>
         </div>
     )
 }
